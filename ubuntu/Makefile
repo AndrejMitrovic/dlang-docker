@@ -1,4 +1,4 @@
-BASE_IMAGE="ubuntu:18.04"
+BASE_IMAGE="ubuntu:22.04"
 DOCKER_POSTFIX=-ubuntu
 
 include ../common.mak

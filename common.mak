@@ -9,7 +9,7 @@ D_VERSION=dmd
 # Automatically set variables
 ################################################################################
 # The canonical name of the resolved tag
-D_VERSION_RESOLVED=dmd-2.077.1
+D_VERSION_RESOLVED=dmd-2.104.1
 D_COMPILER=$(firstword $(subst -, ,$(D_VERSION)))
 DOCKER_IMAGE_BASE=$(D_COMPILER)$(DOCKER_POSTFIX)
 # The alias for the img, e.g. dmd-nightly
@@ -19,7 +19,7 @@ ifneq (,$(findstring $(D_COMPILER)-,$(D_VERSION)))
 else
  DOCKER_IMAGE_NAME=$(DOCKER_IMAGE_BASE):latest
 endif
-# The canonical name, e.g. dmd:2.077.1
+# The canonical name, e.g. dmd:2.104.1
 DOCKER_IMAGE_NAME_RESOLVED=$(DOCKER_IMAGE_BASE):$(subst $(D_COMPILER)-,,$(D_VERSION_RESOLVED))
 # LDC is installed as ldc2
 D_COMPILER_EXEC=$(subst ldc,ldc2,$(D_COMPILER))
